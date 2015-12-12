@@ -1,0 +1,515 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StationActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView" >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+
+                <LinearLayout
+                    android:layout_width="135dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical"
+
+                    android:id="@+id/station_a">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="422dp"
+                        android:background="@color/primary"
+                        android:id="@+id/station_a_inside">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Station\nA"
+                            android:id="@+id/station_a_title"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:layout_marginBottom="73dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:textAlignment="center"
+                            android:gravity="center" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:padding="5dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Total Passengers (TP)"
+                                android:id="@+id/station_a_passengers_count"
+                                android:layout_centerVertical="true"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="30dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="New Returners (NR)"
+                                android:id="@+id/station_a_returners"
+                                android:textColor="@color/white"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#701abc9c"
+                        android:id="@+id/station_a_outside">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Avg.\nThroughput (AT)"
+                                android:id="@+id/station_a_avg_throughput"
+                                android:textColor="@color/white"
+                                android:padding="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="false"
+                                android:layout_alignParentStart="false" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Passengers Leaving (PL)"
+                                android:id="@+id/station_a_leaving_passengers"
+                                android:textColor="@color/white"
+                                android:padding="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="false"
+                                android:layout_alignParentStart="false"
+                                android:layout_marginTop="20dp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="132dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/octonary"
+                    android:id="@+id/train_tracks"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_0"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_40"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_marginTop="27dp"
+                        android:layout_below="@+id/train_pos_0"
+                        android:layout_alignLeft="@+id/train_pos_0"
+                        android:layout_alignStart="@+id/train_pos_0" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_90"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_below="@+id/train_pos_40"
+                        android:layout_alignLeft="@+id/train_pos_40"
+                        android:layout_alignStart="@+id/train_pos_40"
+                        android:layout_marginTop="28dp" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_200"
+                        android:layout_row="30"
+                        android:layout_column="19"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_alignBottom="@+id/linearLayout"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_210"
+                        android:layout_row="30"
+                        android:layout_column="19"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_below="@+id/train_pos_600"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_250"
+                        android:layout_row="25"
+                        android:layout_column="0"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+
+                        android:layout_alignParentBottom="true"/>
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_390"
+                        android:layout_row="30"
+                        android:layout_column="19"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_below="@+id/train_pos_600"
+                        android:layout_toRightOf="@+id/train_pos_210"
+                        android:layout_toEndOf="@+id/train_pos_210" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_500"
+                        android:layout_row="30"
+                        android:layout_column="19"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignLeft="@+id/train_pos_600"
+                        android:layout_alignStart="@+id/train_pos_600" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_600"
+                        android:layout_row="21"
+                        android:layout_column="19"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_below="@+id/train_pos_200"
+                        android:layout_alignLeft="@+id/train_pos_680"
+                        android:layout_alignStart="@+id/train_pos_680" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_680"
+                        android:layout_row="21"
+                        android:layout_column="19"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_below="@+id/train_pos_90"
+                        android:layout_alignLeft="@+id/train_pos_715"
+                        android:layout_alignStart="@+id/train_pos_715" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_715"
+                        android:layout_row="21"
+                        android:layout_column="19"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_above="@+id/train_pos_90"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_750"
+                        android:layout_row="21"
+                        android:layout_column="19"
+                        android:src="@drawable/ic_launcher"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/train_pos_890"
+                        android:layout_row="21"
+                        android:layout_column="19"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="invisible"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/train_pos_0"
+                        android:layout_toEndOf="@+id/train_pos_0" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_below="@+id/train_pos_680"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/linearLayout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0 mph"
+                            android:id="@+id/train_speed"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_alignTop="@+id/train_pos_200"
+                            android:layout_toRightOf="@+id/train_pos_200"
+                            android:layout_toEndOf="@+id/train_pos_200"
+                            android:gravity="center"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/train_state"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:singleLine="false"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="State"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="0 Aboard"
+                            android:id="@+id/train_passengers_count"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_alignTop="@+id/train_pos_200"
+                            android:layout_toRightOf="@+id/train_pos_200"
+                            android:layout_toEndOf="@+id/train_pos_200"
+                            android:gravity="center" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/container_conductor"
+                            android:layout_below="@+id/train_pos_200"
+                            android:layout_toLeftOf="@+id/train_pos_600"
+                            android:layout_toStartOf="@+id/train_pos_600"
+                            android:visibility="invisible">
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:id="@+id/ic_conductor_body"
+                                android:src="@drawable/ic_conductor"
+                                android:layout_alignTop="@+id/train_pos_600"
+                                android:layout_toLeftOf="@+id/train_pos_600"
+                                android:layout_toStartOf="@+id/train_pos_600"
+                                android:layout_gravity="center_horizontal" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:id="@+id/ic_conductor_text"
+                                android:text="Go!"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textAlignment="gravity"
+                                android:padding="5dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="135dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/station_b">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="397dp"
+                        android:background="@color/tertiary"
+                        android:id="@+id/station_b_inside" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Station\nB"
+                            android:id="@+id/station_b_title"
+                            android:textColor="@color/white"
+                            android:textStyle="bold|italic"
+                            android:singleLine="false"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="12dp" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:layout_below="@+id/station_b_title"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="39dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Total Passengers (TP)"
+                                android:id="@+id/station_b_passengers_count"
+                                android:layout_below="@+id/station_b_title"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="30dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="New\nReturners (NR)"
+                                android:id="@+id/station_b_returners"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#70D2527F"
+                        android:id="@+id/station_b_outside" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Avg.\nThroughput (AT)"
+                                android:id="@+id/station_b_avg_throughput"
+                                android:textColor="@color/white"
+                                android:padding="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentTop="false" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Passengers Leaving (PL)"
+                                android:id="@+id/station_b_leaving_passengers"
+                                android:textColor="@color/white"
+                                android:padding="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="false"
+                                android:layout_alignParentStart="false"
+                                android:layout_marginTop="20dp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </GridLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Serviced"
+                android:id="@+id/train_serviced_passengers_count"
+                android:textColor="@color/dark_grey"
+                android:textStyle="bold|italic"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

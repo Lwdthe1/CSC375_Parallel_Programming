@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#1abc9c</color>
+    <color name="primary_dark">#16a085</color>
+    <color name="secodary">#00CCCC</color>
+    <color name="tertiary">#D2527F</color>
+    <color name="quaternary">#f1c40f</color>
+    <color name="quinary">#c0392b</color>
+    <color name="senary">#3498db</color>
+    <color name="septenary">#1F3A93</color>
+    <color name="octonary">#52B3D9</color>
+
+    <color name="floating_action_button_color">#1abc9c</color>
+    <color name="ebony_clay_blue">#22313F</color>
+    <color name="asbestos_grey">#7f8c8d</color>
+    <color name="concrete_grey">#95a5a6</color>
+    <color name="lynch_grey">#6C7A89</color>
+    <color name="grey">#808080</color>
+    <color name="dark_grey">#333333</color>
+    <color name="background_blue">#2980b9</color>
+    <color name="light_gray">#bbbbbb</color>
+    <color name="apptheme_color">#3498db</color>
+    <color name="white_background">#fff</color>
+    <color name="faded_blue_background">#E4F1FE</color>
+    <color name="light_blue">#52B3D9</color>
+    <color name="pressed_blue_button">#22A7F0</color>
+    <color name="focused_blue_button">#4183D7</color>
+    <color name="text_color_blue">#3498db</color>
+    <color name="white">#fff</color>
+    <color name="green">#2ecc71</color>
+    <color name="red">#e74c3c</color>
+    <color name="sun_flower">#f1c40f</color>
+    <color name="user_info">#7f8c8d</color>
+    <color name="question_heading_text">#fff</color>
+    <color name="app_green">#1abc9c</color>
+    <color name="post_new_question_text">#2c3e50</color>
+    <color name="user_info_darker">#808080</color>
+    <color name="app_blue">#3498db</color>
+    <color name="pomegranate">#c0392b</color>
+    <color name="silver">#bdc3c7</color>
+    <color name="black">#000</color>
+    <color name="clouds">#ECF0F1</color>
+    <color name="turquoise">#1abc9c</color>
+    <color name="carabet">#D2527F</color>
+    <color name="wet_asphalt">#34495e</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="greeting_comp_input">#333333</color>
+
+</resources>
