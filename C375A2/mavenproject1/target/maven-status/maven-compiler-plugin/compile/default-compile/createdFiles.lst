@@ -1,0 +1,13 @@
+com\mycompany\generated\MyBenchmark_testMethod_jmhTest.class
+org\openjdk\jmh\infra\generated\Blackhole_jmhType_B1.class
+com\mycompany\generated\MyBenchmark_jmhType_B3.class
+org\openjdk\jmh\infra\generated\Blackhole_jmhType.class
+com\mycompany\generated\MyBenchmark_jmhType.class
+com\mycompany\mavenproject1\NewClass.class
+com\mycompany\generated\MyBenchmark_jmhType_B1.class
+org\openjdk\jmh\infra\generated\Blackhole_jmhType_B2.class
+org\openjdk\jmh\infra\generated\Blackhole_jmhType_B3.class
+com\mycompany\generated\MyBenchmark_jmhType_B2.class
+META-INF\BenchmarkList
+META-INF\CompilerHints
+com\mycompany\MyBenchmark.class
